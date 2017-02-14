@@ -1,3 +1,4 @@
+"""Test suit for postalcodes_mexico."""
 # -*- coding: utf-8 -*-
 import sqlite3
 
@@ -6,60 +7,78 @@ import pytest
 
 
 def test_places_with_one_place():
-
+    # GIVEN a single, existing postal code
     CP = '01000'
 
+    # WHEN using the places method
     places = postalcodes_mexico.places(CP)
 
+    # THEN it returns a list with exactly one place
     assert isinstance(places, list)
     assert len(places) == 1
 
+    # AND that place is San Ángel
+    place = places[0]
+    assert place[1] == 'San Ángel'
+
 
 def test_places_with_multiple_places():
-
+    # GIVEN another known postal code
     CP = '01030'
 
+    # WHEN using the places method
     places = postalcodes_mexico.places(CP)
 
+    # THEN it returns a list of two places
     assert isinstance(places, list)
     assert len(places) == 2
 
 
 def test_update_db():
+    # GIVEN a test database and a short XML file
     test_db = 'test.db'
     xml_file = 'data/ciudad_de_mexico.xml'
 
+    # WHEN calling the update method
     postalcodes_mexico.update_db(db=test_db, xml_file=xml_file)
 
     con = sqlite3.connect(test_db)
     con.row_factory = sqlite3.Row
 
+    # THEN the test database has entries
     CP = '01000'
-
     places = postalcodes_mexico.places(CP, db=test_db)
 
     assert len(places) == 1
     assert isinstance(places, list)
 
     place = places[0]
-
     assert place[0] == '01000'
     assert place[1] == 'San Ángel'
 
 
 def test_xmltolist():
-
+    # GIVEN a short XML file
     xml_file = 'data/ciudad_de_mexico.xml'
+
+    # WHEN calling the xmltolist method
     result = postalcodes_mexico.xmltolist(xml_file)
 
+    # THEN it returns a list with a lot of places
     assert isinstance(result, list)
     assert len(result) > 1000
 
+    # AND they are tuples
+    assert isinstance(result[5], tuple)
+
 
 def test_postalcodes_without_parameter():
+    # GIVEN the full database
 
+    # WHEN calling the postalcodes method without a parameter
     cp_list = postalcodes_mexico.postalcodes()
 
+    # THEN it returns a list of all Mexican postal codes
     assert isinstance(cp_list, list)
     assert len(cp_list) > 100000
     assert '01000' in cp_list
@@ -73,15 +92,21 @@ def test_postalcodes_without_parameter():
     ]
 )
 def test_postalcodes_with_beginning_of_postalcode(cp, cp_full):
+    # GIVEN the beginning of a postal code
 
+    # WHEN calling the postalcodes method with the beginning of the CP as a parameter
     cp_list = postalcodes_mexico.postalcodes(cp)
 
+    # THEN a matching full postal code is in the returned list
     assert cp_full in cp_list
 
 
-@pytest.mark.parametrize('cp', [('00'),('99999'),('88888'),])
+@pytest.mark.parametrize('cp', [('00'), ('99999'), ('88888'), ])
 def test_non_existing_postalcodes(cp):
+    # GIVEN the beginning of a non-existent postal code
 
+    # WHEN calling the postalcodes method with it
     cp_list = postalcodes_mexico.postalcodes(cp)
 
+    # THEN the returned list is empty
     assert len(cp_list) == 0
