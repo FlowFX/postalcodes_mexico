@@ -30,6 +30,33 @@ Features
 
 * TODO
 
+
+Reference
+---------
+The data used in this package comes from the official website of the `Mexican Postal Service`_ (Correos Mexico). On the page that offers the the download of the catalogue of postal codes it is stated that this data is not to be commercialized:
+
+    El Catálogo Nacional de Códigos Postales, es elaborado por el Servicio Postal Mexicano y se proporciona en forma gratuita, no estando permitida su comercialización, total o parcial.
+
+http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.aspx
+
+.. _Mexican Postal Service: http://www.correosdemexico.com.mx/Paginas/Inicio.aspx
+.. _catalogue of postal codes: http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.aspx
+
+
+Todo
+-------
+* Make a real Python package
+* Add update_db script outside of Python package
+* Move database into Python package
+* move update functionality out of main package
+
+
+Future ideas
+-----------
+* create command line tool
+* create django package with postalcode form field
+
+
 Credits
 ---------
 
