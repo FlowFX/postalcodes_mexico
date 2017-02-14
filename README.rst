@@ -17,6 +17,9 @@ Postal Codes Mexico
      :target: https://pyup.io/repos/github/flowfx/postalcodes_mexico/
      :alt: Updates
 
+.. image:: https://circleci.com/gh/FlowFX/postalcodes_mexico/tree/master.svg?style=svg
+        :target: https://circleci.com/gh/FlowFX/postalcodes_mexico/tree/master
+
 
 Postal codes Mexico determines large parts of an address from its postal code (C.P.).
 
