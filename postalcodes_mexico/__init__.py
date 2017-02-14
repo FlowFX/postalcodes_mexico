@@ -4,11 +4,15 @@ __author__ = """Florian Posdziech"""
 __email__ = 'hallo@flowfx.de'
 __version__ = '0.1.0'
 
+import os
 import xmltodict
 import sqlite3
 
+BASE_DIR = os.path.dirname(os.path.realpath(__file__))
+DB_PATH = os.path.abspath(os.path.join(BASE_DIR, 'postalcodes.sql'))
 
-def places(postalcode, db='postalcodes_mexico/postalcodes.sql'):
+
+def places(postalcode, db=DB_PATH):
 
     con = sqlite3.connect(db)
     con.row_factory = sqlite3.Row
@@ -25,7 +29,7 @@ def places(postalcode, db='postalcodes_mexico/postalcodes.sql'):
     return result
 
 
-def update_db(db='postalcodes_mexico/postalcodes.sql', xml_file='data/CPdescarga.xml'):
+def update_db(db=DB_PATH, xml_file='data/CPdescarga.xml'):
     """Update the places database.
 
     Use the XML files provided by Correos Mexico.
