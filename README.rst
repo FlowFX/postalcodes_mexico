@@ -60,6 +60,7 @@ http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.asp
 
 Todo
 ----
+* Publish on PyPI
 * Add update_db script outside of Python package
 * move update functionality out of main package
 
