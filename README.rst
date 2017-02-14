@@ -58,17 +58,11 @@ http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.asp
 .. _catalogue of postal codes: http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.aspx
 
 
-Todo
-----
-* Publish on PyPI
-* Add update_db script outside of Python package
-* move update functionality out of main package
+Roadmap
+-------
+Ideas for the future development can be found among the project's `GitHub issues`_.
 
-
-Future ideas
-------------
-* create command line tool
-* create django package with postalcode form field
+.. _GitHub issues: https://github.com/FlowFX/postalcodes_mexico/issues/
 
 
 Credits
