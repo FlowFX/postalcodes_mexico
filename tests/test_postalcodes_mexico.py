@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import sqlite3
-from postalcodes_mexico import postalcodes_mexico
+import postalcodes_mexico
 
 
 def test_places_with_one_place():
