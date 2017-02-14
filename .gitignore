@@ -61,5 +61,6 @@ target/
 # pyenv python configuration file
 .python-version
 
-# Custom
+# Custom development files
 data/
+test.db
