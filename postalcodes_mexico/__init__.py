@@ -29,6 +29,24 @@ def places(postalcode, db=DB_PATH):
     return result
 
 
+def postalcodes(postalcode='', db=DB_PATH):
+
+    con = sqlite3.connect(db)
+    con.row_factory = sqlite3.Row
+
+    cp = (postalcode, )
+
+    with con:
+        c = con.cursor()
+
+        c.execute('SELECT cp FROM places WHERE cp LIKE ?', ('{}%'.format(postalcode),))
+        # cursor.execute("SELECT * FROM posts WHERE tags LIKE ?", ('%{}%'.format(tag),))
+
+        result = [row[0] for row in c]
+
+    return result
+
+
 def update_db(db=DB_PATH, xml_file='data/CPdescarga.xml'):
     """Update the places database.
 

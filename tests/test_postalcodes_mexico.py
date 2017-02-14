@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import sqlite3
+
 import postalcodes_mexico
+import pytest
 
 
 def test_places_with_one_place():
@@ -52,3 +54,34 @@ def test_xmltolist():
 
     assert isinstance(result, list)
     assert len(result) > 1000
+
+
+def test_postalcodes_without_parameter():
+
+    cp_list = postalcodes_mexico.postalcodes()
+
+    assert isinstance(cp_list, list)
+    assert len(cp_list) > 100000
+    assert '01000' in cp_list
+
+
+@pytest.mark.parametrize(
+    'cp, cp_full', [
+        ('01', '01000'),
+        ('0103', '01030'),
+        ('99', '99998'),
+    ]
+)
+def test_postalcodes_with_beginning_of_postalcode(cp, cp_full):
+
+    cp_list = postalcodes_mexico.postalcodes(cp)
+
+    assert cp_full in cp_list
+
+
+@pytest.mark.parametrize('cp', [('00'),('99999'),('88888'),])
+def test_non_existing_postalcodes(cp):
+
+    cp_list = postalcodes_mexico.postalcodes(cp)
+
+    assert len(cp_list) == 0
