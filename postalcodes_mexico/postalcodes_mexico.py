@@ -33,18 +33,19 @@ def update_db(db='postalcodes_mexico/postalcodes.sql', xml_file='data/CPdescarga
         con.execute("DROP TABLE IF EXISTS places")
         con.execute("CREATE TABLE places(cp, place, place_type, municipality, city,  state)")
 
-        con.executemany("INSERT INTO places(cp, place, place_type, municipality, city, state) VALUES (?, ?, ?, ?, ?, ?)", places)
+        con.executemany("INSERT INTO places(cp, place, place_type, municipality, city, state)" +
+                        "VALUES (?, ?, ?, ?, ?, ?)", places)
 
 
 # cf. http://stackoverflow.com/a/8915613
-def catch(func, handle=lambda e : e, *args, **kwargs):
+def catch(func, handle=lambda e: e, *args, **kwargs):
     try:
         return func(*args, **kwargs)
     except KeyError:
         return ''
 
-def xmltolist(xml_file='data/ciudad_de_mexico.xml'):
 
+def xmltolist(xml_file='data/ciudad_de_mexico.xml'):
 
     with open(xml_file, 'r') as f:
         xml = f.read()
@@ -52,14 +53,12 @@ def xmltolist(xml_file='data/ciudad_de_mexico.xml'):
         data = xmltodict.parse(xml, process_namespaces=True)
         clean_data = data['NewDataSet']['NewDataSet:table']
 
-
-
-    places = [(catch(lambda : row['NewDataSet:d_codigo']),
-               catch(lambda : row['NewDataSet:d_asenta']),
-               catch(lambda : row['NewDataSet:d_tipo_asenta']),
-               catch(lambda : row['NewDataSet:d_ciudad']),
-               catch(lambda : row['NewDataSet:D_mnpio']),
-               catch(lambda : row['NewDataSet:d_estado']),
+    places = [(catch(lambda: row['NewDataSet:d_codigo']),
+               catch(lambda: row['NewDataSet:d_asenta']),
+               catch(lambda: row['NewDataSet:d_tipo_asenta']),
+               catch(lambda: row['NewDataSet:d_ciudad']),
+               catch(lambda: row['NewDataSet:D_mnpio']),
+               catch(lambda: row['NewDataSet:d_estado']),
                ) for row in clean_data]
 
     return places
