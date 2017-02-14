@@ -18,22 +18,37 @@ Postal codes Mexico
      :alt: Updates
 
 
-Postal codes Mexico determines large parts of an address from iits postal code (C.P.).
+Postal codes Mexico determines large parts of an address from its postal code (C.P.).
 
 
 * Free software: MIT license
 * Documentation: https://postalcodes-mexico.readthedocs.io.
 
 
-Features
+Usage
 --------
+The method `places` returns a list of tuples with all places that share the postal code.
 
-* TODO
+    >>> from postalcodes_mexico import places
+    >>> places('01000')
+    [('01000', 'San Ángel', 'Colonia', 'Ciudad de México', 'Álvaro Obregón', 'Ciudad de México')]
+    >>> my_places = places('01030')
+    >>> len(my_places)
+    2
+    >>> my_places[0]
+    ('01030', 'Axotla', 'Pueblo', 'Ciudad de México', 'Álvaro Obregón', 'Ciudad de México')
+    >>> my_places[1]
+    ('01030', 'Florida', 'Colonia', 'Ciudad de México', 'Álvaro Obregón', 'Ciudad de México')
+    >>> for place in my_places:
+    ...     print(place[0], place[1], place[3])
+    ...
+    01030 Axotla Ciudad de México
+    01030 Florida Ciudad de México
 
 
 Reference
 ---------
-The data used in this package comes from the official website of the `Mexican Postal Service`_ (Correos Mexico). On the page that offers the the download of the catalogue of postal codes it is stated that this data is not to be commercialized:
+The data used in this package comes from the official website of the `Mexican Postal Service`_ (Correos Mexico). On the download page of the `catalogue of postal codes`_ it is stated that this data is not to be commercialized:
 
     El Catálogo Nacional de Códigos Postales, es elaborado por el Servicio Postal Mexicano y se proporciona en forma gratuita, no estando permitida su comercialización, total o parcial.
 
@@ -44,21 +59,19 @@ http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.asp
 
 
 Todo
--------
-* Make a real Python package
+----
 * Add update_db script outside of Python package
-* Move database into Python package
 * move update functionality out of main package
 
 
 Future ideas
------------
+------------
 * create command line tool
 * create django package with postalcode form field
 
 
 Credits
----------
+-------
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 

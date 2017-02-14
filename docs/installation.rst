@@ -8,7 +8,7 @@ Installation
 Stable release
 --------------
 
-To install Postal codes Mexico, run this command in your terminal:
+To install Postal Codes Mexico, run this command in your terminal:
 
 .. code-block:: console
 

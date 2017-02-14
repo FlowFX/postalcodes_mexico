@@ -1,5 +1,5 @@
-Welcome to Postal codes Mexico's documentation!
-======================================
+Welcome to Postal Codes Mexico's documentation!
+===============================================
 
 Contents:
 
