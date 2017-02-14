@@ -1,5 +1,5 @@
 ===============================
-Postal codes Mexico
+Postal Codes Mexico
 ===============================
 
 
