@@ -1,5 +1,5 @@
-"""Test suit for postalcodes_mexico."""
 # -*- coding: utf-8 -*-
+"""Test suit for postalcodes_mexico."""
 import postalcodes_mexico
 
 import pytest
@@ -16,7 +16,7 @@ def test_places_with_one_place():
     assert isinstance(places, list)
     assert len(places) == 1
 
-    # AND that place is San Angel
+    # AND that place is San Ángel
     place = places[0]
     assert place[1] == 'San Ángel'
 

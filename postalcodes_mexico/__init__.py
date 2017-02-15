@@ -1,5 +1,5 @@
-"""Main package of 'postalcodes_mexico'."""
 # -*- coding: utf-8 -*-
+"""Main package of 'postalcodes_mexico'."""
 
 __author__ = """Florian Posdziech"""
 __email__ = 'hallo@flowfx.de'

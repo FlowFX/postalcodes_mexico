@@ -1,5 +1,5 @@
-"""Test suit for postalcodes_mexico."""
 # -*- coding: utf-8 -*-
+"""Test suit for postalcodes_mexico."""
 import sqlite3
 
 import postalcodes_mexico
