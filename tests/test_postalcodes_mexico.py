@@ -16,7 +16,7 @@ def test_places_with_one_place():
     assert isinstance(places, list)
     assert len(places) == 1
 
-    # AND that place is San Ángel
+    # AND that place is San Angel
     place = places[0]
     assert place[1] == 'San Ángel'
 
