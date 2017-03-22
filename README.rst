@@ -14,11 +14,13 @@ Postal Codes Mexico
         :target: https://postalcodes-mexico.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
-.. image:: https://pyup.io/repos/github/flowfx/postalcodes_mexico/shield.svg
-     :target: https://pyup.io/repos/github/flowfx/postalcodes_mexico/
+.. image:: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/shield.svg
+     :target: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/
      :alt: Updates
 
-
+.. image:: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/python-3-shield.svg
+     :target: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/
+     :alt: Python 3
 
 Postal codes Mexico determines large parts of an address from its postal code (C.P.).
 
