@@ -5,7 +5,6 @@ import postalcodes_mexico
 import pytest
 
 
-
 def test_places_with_one_place():
     # GIVEN a single, existing postal code
     CP = '01000'
@@ -35,8 +34,8 @@ def test_places_are_named_tuples():
     assert my_place.postal_code == CP
     assert my_place.place == 'San Ángel'
     assert my_place.place_type == 'Colonia'
-    # assert my_place.municipality == 'Álvaro Obregón'
-    # assert my_place.city == 'Ciudad de México'
+    assert my_place.municipality == 'Álvaro Obregón'
+    assert my_place.city == 'Ciudad de México'
     assert my_place.state == 'Ciudad de México'
 
 
