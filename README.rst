@@ -31,7 +31,7 @@ Postal codes Mexico determines large parts of an address from its postal code (C
 
 Usage
 --------
-The method `places` returns a list of tuples with all places that share the postal code.
+The method `places` returns a list of named tuples with all places that share the postal code.
 
     >>> from postalcodes_mexico import places
     >>> places('01000')
@@ -48,6 +48,13 @@ The method `places` returns a list of tuples with all places that share the post
     ...
     01030 Axotla Ciudad de México
     01030 Florida Ciudad de México
+    >>> my_place = places('01000')[0]
+    >>> my_place.postal_code
+    01000
+    >>> my_place.city
+    Ciudad de Méxic
+    >>> my_place.place_type
+    Colonia
 
 
 Reference
