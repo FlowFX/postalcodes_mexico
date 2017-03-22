@@ -10,10 +10,6 @@ Postal Codes Mexico
         :target: https://travis-ci.org/FlowFX/postalcodes_mexico
         :alt: TravisCI
 
-.. image:: https://circleci.com/gh/FlowFX/postalcodes_mexico/tree/master.svg?style=svg
-        :target: https://circleci.com/gh/FlowFX/postalcodes_mexico/tree/master
-        :alt: CircleCI
-
 .. image:: https://readthedocs.org/projects/postalcodes-mexico/badge/?version=latest
         :target: https://postalcodes-mexico.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
