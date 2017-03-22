@@ -33,8 +33,8 @@ def xmltolist(xml_file):
     places = [(catch(lambda: row['NewDataSet:d_codigo']),
                catch(lambda: row['NewDataSet:d_asenta']),
                catch(lambda: row['NewDataSet:d_tipo_asenta']),
-               catch(lambda: row['NewDataSet:d_ciudad']),
                catch(lambda: row['NewDataSet:D_mnpio']),
+               catch(lambda: row['NewDataSet:d_ciudad']),
                catch(lambda: row['NewDataSet:d_estado']),
                ) for row in clean_data]
 

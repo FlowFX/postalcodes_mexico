@@ -28,6 +28,10 @@ def test_update_db():
     place = places[0]
     assert place[0] == '01000'
     assert place[1] == 'San Ángel'
+    assert place[2] == 'Colonia'
+    assert place[3] == 'Álvaro Obregón'
+    assert place[4] == 'Ciudad de México'
+    assert place[5] == 'Ciudad de México'
 
 
 def test_xmltolist():
