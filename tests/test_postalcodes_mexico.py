@@ -25,12 +25,15 @@ def test_places_are_named_tuples():
     # GIVEN a single, existing postal code
     CP = '01000'
 
+    # WHEN using the places method
     my_places = postalcodes_mexico.places(CP)
     my_place = my_places[0]
 
+    # THEN it returns a list of named tuples
     assert isinstance(my_places, list)
     assert isinstance(my_place, tuple)
 
+    # AND all attributes can be called
     assert my_place.postal_code == CP
     assert my_place.place == 'San Ángel'
     assert my_place.place_type == 'Colonia'
