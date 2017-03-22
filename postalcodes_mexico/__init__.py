@@ -8,8 +8,13 @@ __version__ = '0.1.0'
 import os
 import sqlite3
 
+from collections import namedtuple
+
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
 DB_PATH = os.path.abspath(os.path.join(BASE_DIR, 'postalcodes.sql'))
+
+
+Location = namedtuple('Location', ['postal_code', 'place', 'place_type', 'municipality', 'city', 'state'])
 
 
 def places(postalcode, db=DB_PATH):
@@ -24,7 +29,9 @@ def places(postalcode, db=DB_PATH):
 
         c.execute('SELECT cp, place, place_type, municipality, city, state FROM places WHERE cp =?', cp)
 
-        result = [tuple(row) for row in c]
+        # create a list of named tuples
+        # cf. https://docs.python.org/3/library/collections.html#collections.namedtuple
+        result = [location for location in map(Location._make, c.fetchall())]
 
     return result
 
