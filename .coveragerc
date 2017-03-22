@@ -1,0 +1,8 @@
+[run]
+source = 
+	postalcodes_mexico
+	utils
+branch = True
+omit = 
+	# omit all tests
+	*/tests/*
