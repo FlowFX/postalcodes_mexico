@@ -6,7 +6,11 @@ env:
 install: pip install -U tox
 script: tox -e ${TOXENV}
 after_success:
+  - pytest --cov
   - coveralls
+notifications:
+  email: false
+
 # deploy:
 #   provider: pypi
 #   distributions: sdist bdist_wheel
