@@ -1,23 +1,17 @@
 language: python
-python: 3.5
+python: 3.6
 env:
-  - TOXENV=py35
-  - TOXENV=py34
+- TOXENV=py36
+- TOXENV=py35
 install: pip install -U tox
 script: tox -e ${TOXENV}
-after_success:
-  - pytest --cov
-  - coveralls
-notifications:
-  email: false
-
-# deploy:
-#   provider: pypi
-#   distributions: sdist bdist_wheel
-#   user: flowfx
-#   password:
-#     secure: e64c2uUcYIxAzeSwJ1G6mCqgGIr2R1JaEJUbAwKxUFKWhFcjoHj+hTWl80mIo4cLZgtzreJAszhlAiqAs0VwrLoSq0jRPXA4hl4G4wex0l6zq5OCS1VpYVeTlg0z81046u44rpP5zHO687bmljdDHPDp8mb2GIDugPu3+F1+Q433bxmp1n3un9yc7pq9IznARXhajLwjUpHeHCFHF1W/atBW+uXF3tirUuAJarHFejQcxbqZBkISwR44nBJuzmGGievVBQGDCzIpGguEM+56rIMwcDq/S/VD29JCoLEBvPGX0VnOLasRw6X+bROP1o71EoeminpDLZbM4ip0+WY9QXaEEvEvjaiqAcKvHNkFjskL31Bqnn/lj9ixGfS1KMf11mARLHcpMDuW0+gHdE6Go7o2zfQgzzKuLoevYvHF1Y0ZprCcAjosGTZbfgUWWFAScPM7Y9sCFfid4wfMjSiai25wV6nDVogb8LBN9rIPu64LFM3V6MLWrR6dTd21Mc8glTZcfi2ZAOgsXgrJXBxYuGaY8p37aM876yH+P29HKUf0RSHBafabLe3pTyoQhCxg1SA5JJZH3Vh/LipYqxm+Cqps+//eQN+YxF0GX72DKlwj3YYp16EFiSUHQvnWLQJjWb5ndsl3tTXNo3MmBBtoKfnmNXvk5wa7TVfzpOQc4UI=
-#   on:
-#     tags: true
-#     repo: flowfx/postalcodes_mexico
-#     condition: "$TOXENV == py35"
+#deploy:
+#  provider: pypi
+#  distributions: sdist bdist_wheel
+#  user: flowfx
+#  password:
+#    secure: e64c2uUcYIxAzeSwJ1G6mCqgGIr2R1JaEJUbAwKxUFKWhFcjoHj+hTWl80mIo4cLZgtzreJAszhlAiqAs0VwrLoSq0jRPXA4hl4G4wex0l6zq5OCS1VpYVeTlg0z81046u44rpP5zHO687bmljdDHPDp8mb2GIDugPu3+F1+Q433bxmp1n3un9yc7pq9IznARXhajLwjUpHeHCFHF1W/atBW+uXF3tirUuAJarHFejQcxbqZBkISwR44nBJuzmGGievVBQGDCzIpGguEM+56rIMwcDq/S/VD29JCoLEBvPGX0VnOLasRw6X+bROP1o71EoeminpDLZbM4ip0+WY9QXaEEvEvjaiqAcKvHNkFjskL31Bqnn/lj9ixGfS1KMf11mARLHcpMDuW0+gHdE6Go7o2zfQgzzKuLoevYvHF1Y0ZprCcAjosGTZbfgUWWFAScPM7Y9sCFfid4wfMjSiai25wV6nDVogb8LBN9rIPu64LFM3V6MLWrR6dTd21Mc8glTZcfi2ZAOgsXgrJXBxYuGaY8p37aM876yH+P29HKUf0RSHBafabLe3pTyoQhCxg1SA5JJZH3Vh/LipYqxm+Cqps+//eQN+YxF0GX72DKlwj3YYp16EFiSUHQvnWLQJjWb5ndsl3tTXNo3MmBBtoKfnmNXvk5wa7TVfzpOQc4UI=
+#  on:
+#    tags: true
+#    repo: flowfx/postalcodes-mexico
+#    condition: "$TOXENV == py35"
