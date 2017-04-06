@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Script to update the postalcodes.sql database."""
+"""Script to update the postalcodes.sqlite3 database."""
 import sqlite3
 
 import xmltodict

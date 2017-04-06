@@ -11,7 +11,7 @@ import sqlite3
 from collections import namedtuple
 
 BASE_DIR = os.path.dirname(os.path.realpath(__file__))
-DB_PATH = os.path.abspath(os.path.join(BASE_DIR, 'postalcodes.sql'))
+DB_PATH = os.path.abspath(os.path.join(BASE_DIR, 'data/postalcodes.sqlite3'))
 
 
 Location = namedtuple('Location', ['postal_code', 'place', 'place_type', 'municipality', 'city', 'state'])
