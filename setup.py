@@ -19,7 +19,7 @@ test_requirements = [
 
 setup(
     name='postalcodes-mexico',
-    version='0.1.2',
+    version='0.1.3',
     description="Determines large parts of a Mexican postal address from its postal code (C.P.).",
     long_description=readme + '\n\n' + history,
     author="Florian Posdziech",
@@ -30,6 +30,7 @@ setup(
     ],
     package_dir={'postalcodes_mexico':
                  'postalcodes_mexico'},
+    package_data={'postalcodes_mexico': ['*.sql']},
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
