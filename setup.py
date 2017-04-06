@@ -18,17 +18,17 @@ test_requirements = [
 ]
 
 setup(
-    name='postalcodes_mexico',
-    version='0.1.0',
-    description="Postal codes Mexico determines large parts of an address from iits postal code (C.P.).",
+    name='postalcodes-mexico',
+    version='0.1.1',
+    description="Determines large parts of a Mexican postal address from its postal code (C.P.).",
     long_description=readme + '\n\n' + history,
     author="Florian Posdziech",
     author_email='hallo@flowfx.de',
     url='https://github.com/flowfx/postalcodes_mexico',
     packages=[
-        'postalcodes_mexico',
+        'postalcodes-mexico',
     ],
-    package_dir={'postalcodes_mexico':
+    package_dir={'postalcodes-mexico':
                  'postalcodes_mexico'},
     include_package_data=True,
     install_requires=requirements,
