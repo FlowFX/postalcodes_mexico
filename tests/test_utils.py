@@ -47,3 +47,16 @@ def test_xmltolist():
 
     # AND they are tuples
     assert isinstance(result[5], tuple)
+
+
+def test_catch():
+    # GIVEN a dictionary
+    data = {'one': 'uno', 'two': 'dos'}
+
+    # WHEN using catch and existing dict key
+    # THEN it returns the value
+    assert utils.catch(lambda: data['one']) == 'uno'
+
+    # WHEN using catch and a non-existing dict key
+    # THEN it returns an empty string
+    assert utils.catch(lambda: data['three']) == ''
