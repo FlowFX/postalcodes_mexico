@@ -29,6 +29,15 @@ def places(postalcode, db=DB_PATH):
     con = sqlite3.connect(db)
     con.row_factory = sqlite3.Row
 
+    try:
+        assert len(postalcode) >= 4
+        assert len(postalcode) <= 5
+    except AssertionError:
+        raise ValueError
+
+    if len(postalcode) == 4:
+        postalcode = '0{}'.format(postalcode)
+
     cp = (postalcode, )
 
     with con:

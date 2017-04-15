@@ -21,6 +21,19 @@ def test_places_with_one_place():
     assert place[1] == 'San Ángel'
 
 
+def test_places_with_one_place_and_4_digit_code():
+    # GIVEN a single, existing, 4-digit postal code
+    CP = '1000'
+
+    # WHEN using the places method
+    places = postalcodes_mexico.places(CP)
+
+    # THEN it returns San Ángel
+    place = places[0]
+    assert place.place == 'San Ángel'
+
+
+
 def test_places_are_named_tuples():
     # GIVEN a single, existing postal code
     CP = '01000'
