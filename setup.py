@@ -19,7 +19,7 @@ test_requirements = [
 
 setup(
     name='postalcodes-mexico',
-    version='0.1.5',
+    version='0.2.0',
     description="Determines large parts of a Mexican postal address from its postal code (C.P.).",
     long_description=readme + '\n\n' + history,
     author="Florian Posdziech",
