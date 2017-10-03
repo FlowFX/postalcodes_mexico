@@ -3,8 +3,8 @@ python: 3.5
 cache: pip
 env:
   - TOXENV=py35
-  - TOXENV=py34
-  - TOXENV=py33
+  - TOXENV=py36
+  - TOXENV=py37
 install:
   - pip install -r requirements_dev.txt
   - pip install -U tox
