@@ -105,3 +105,4 @@ ENV/
 
 # py.test
 .pytest_cache/
+test.db
