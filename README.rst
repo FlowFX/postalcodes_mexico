@@ -1,6 +1,3 @@
-.. image:: https://badge.waffle.io/FlowFX/postalcodes_mexico.png?columns=all 
- :target: https://waffle.io/FlowFX/postalcodes_mexico?utm_source=badge
- :alt: 'Waffle.io - Columns and their card count'
 ==================
 Postalcodes Mexico
 ==================
@@ -19,6 +16,10 @@ Postalcodes Mexico
 .. image:: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/shield.svg
      :target: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/
      :alt: Updates
+
+.. image:: https://badge.waffle.io/FlowFX/postalcodes_mexico.png?columns=all 
+     :target: https://waffle.io/FlowFX/postalcodes_mexico?utm_source=badge
+     :alt: 'Waffle.io - Columns and their card count'
 
 
 
