@@ -27,3 +27,5 @@ deploy:
     tags: true
     repo: flowfx/postalcodes_mexico
     python: 3.6
+notifications:
+  email: never
