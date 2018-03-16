@@ -73,6 +73,30 @@ class TestPlaces:
         assert len(places) == 2
 
 
+class TestPostalcodes:
+    """Test function `postalcodes`."""
+
+    def test_postalcode_returns_list_of_all_postal_codes(self):
+        # GIVEN any state
+        # WHEN invoiking the postalcodes function without an argument
+        postalcodes = postalcodes_mexico.postalcodes()
+
+        # THEN it returns a long list containing all valid Mexican postal codes
+        assert isinstance(postalcodes, list)
+        assert len(postalcodes) > 140000
+
+    def test_postalcode_returns_list_of_possible_postal_codes(self):
+        # GIVEN a partial postal code
+        CP = '010'
+
+        # WHEN invoeking the postalcodes function with that partial
+        postalcodes = postalcodes_mexico.postalcodes(CP)
+
+        # THEN it returns a list of all matching postal codes
+        assert isinstance(postalcodes, list)
+        assert len(postalcodes) > 1
+
+
 def test_command_line_interface():
     """Test the CLI."""
     runner = CliRunner()
