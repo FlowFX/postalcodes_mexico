@@ -6,7 +6,7 @@ Postalcodes Mexico
 .. image:: https://img.shields.io/pypi/v/postalcodes_mexico.svg
         :target: https://pypi.python.org/pypi/postalcodes_mexico
 
-.. image:: https://img.shields.io/travis/flowfx/postalcodes_mexico.svg
+.. image:: https://img.shields.io/travis/FlowFX/postalcodes_mexico.svg
         :target: https://travis-ci.org/flowfx/postalcodes_mexico
 
 .. image:: https://readthedocs.org/projects/postalcodes-mexico/badge/?version=latest
