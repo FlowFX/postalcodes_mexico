@@ -4,4 +4,4 @@
 
 __author__ = """Florian Posdziech"""
 __email__ = 'hallo@flowfx.de'
-__version__ = '0.2.2'
+__version__ = '0.2.3'
