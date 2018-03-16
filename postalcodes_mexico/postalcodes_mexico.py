@@ -49,7 +49,6 @@ def places(postalcode, db=DB_PATH):
                    FROM places WHERE cp =?', cp)
 
         # create a list of named tuples
-        # cf. https://docs.python.org/3/library/collections.html#collections.namedtuple
         result = [location for location in map(Location._make, c.fetchall())]
 
     return result
@@ -63,7 +62,10 @@ def postalcodes(postalcode='', db=DB_PATH):
     with con:
         c = con.cursor()
 
-        c.execute('SELECT cp FROM places WHERE cp LIKE ?', ('{}%'.format(postalcode),))
+        c.execute(
+            'SELECT cp FROM places WHERE cp LIKE ?',
+            ('{}%'.format(postalcode),)
+        )
 
         result = [row[0] for row in c]
 
