@@ -12,7 +12,7 @@ deploy:
     secure: ZMea7c14IJmiwxe3FpQxw9JYUhHbXPEL5ZVAJ+umxi0aLwqXj4ZdvKjp8/bHeAApyMP+psFKvgpdr1/s79M2lJ+U6qbN7cv7cl5+JFjj6CZBuo9XLEQUiwWhYf9I9GQL4gZYDMOa5CzSQnvkzjtevef1s+/M6PfiIvmAeRPV5lGIDcqsM+ydDRaK1UPaNdy0SvPMngGkxoUD8+e8X6ht5qcZt7HzNK/qL7IcR+KoVVJJdMNEFGdNArEJtuLWVWxy1uTkXLUcYEezejLinhFSSHVvCh46ObRg94ZGH+9QIKCgpQXwC9tJVZOmJCDoCQ/zrNw0U02GpobFEaCkVFlXDOEUaVdSzyKFE0xY3VELZ0dqy8YyqsBTDJ1QR66nrlT+JnXFW6QnPKjK3x4/MXxv2QfC9mXMDLkUXm4jgeTEMqGwENzc16c2N+6Wyj4cRZNYueKD53T2lG3qw/HmttddRp/UoSH9tZ5qSjKk42PpA2r9o/mF36sA8vMStofXiOKquI5ecCza7vhCxeC9nwvFB0xtV8KSPKkTa9Bkhop3fm3lKdeqvUC+TpvaQSLNMsn835HvjAOC9mqk7dEJa2OgFUT0NVkpiERjSdt2UATQ5/Vpd7xSqvuuHflY8+muoxFqOUdyDM4nr4LDsKZyNBOD3kiYkfshv+f0xBsc1cwWcuI=
   on:
     tags: true
-    repo: flowfx/postalcodes_mexico
+    repo: FlowFX/postalcodes_mexico
     python: 3.6
 notifications:
   email: never
