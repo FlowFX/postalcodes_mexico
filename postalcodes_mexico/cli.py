@@ -4,13 +4,15 @@
 import sys
 import click
 
+from postalcodes_mexico import postalcodes_mexico
+
 
 @click.command()
-def main(args=None):
+@click.argument('postalcode', type=str)
+def main(postalcode):
     """Console script for postalcodes_mexico."""
-    click.echo("Replace this message by putting your code into "
-               "postalcodes_mexico.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+    places = postalcodes_mexico.places(postalcode)
+    click.echo(places)
     return 0
 
 
