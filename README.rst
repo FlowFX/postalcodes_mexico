@@ -26,30 +26,7 @@ Determines large parts of a Mexican postal address from its postal code (C.P.).
 Features
 --------
 
-The function `places` returns a list of named tuples with all places that share the postal code.
-
-    >>> from postalcodes_mexico import places
-    >>> places('01000')
-    [('01000', 'San Ángel', 'Colonia', 'Ciudad de México', 'Álvaro Obregón', 'Ciudad de México')]
-    >>> my_places = places('01030')
-    >>> len(my_places)
-    2
-    >>> my_places[0]
-    ('01030', 'Axotla', 'Pueblo', 'Ciudad de México', 'Álvaro Obregón', 'Ciudad de México')
-    >>> my_places[1]
-    ('01030', 'Florida', 'Colonia', 'Ciudad de México', 'Álvaro Obregón', 'Ciudad de México')
-    >>> for place in my_places:
-    ...     print(place[0], place[1], place[3])
-    ...
-    01030 Axotla Ciudad de México
-    01030 Florida Ciudad de México
-    >>> my_place = places('01000')[0]
-    >>> my_place.postal_code
-    01000
-    >>> my_place.city
-    Ciudad de Méxic
-    >>> my_place.place_type
-    Colonia
+Postalcods mexico provides a function `places` that returns a list of named tuples with all places in Mexico that share the given postal code.
 
 Reference
 ---------
