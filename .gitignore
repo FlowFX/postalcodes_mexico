@@ -64,3 +64,6 @@ target/
 # Custom development files
 data/
 test.db
+
+.mypy_cache/
+.vscode/
