@@ -13,6 +13,10 @@ Postalcodes Mexico
         :target: https://postalcodes-mexico.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
+.. image:: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/shield.svg
+     :target: https://pyup.io/repos/github/FlowFX/postalcodes_mexico/
+     :alt: Updates
+
 
 
 
