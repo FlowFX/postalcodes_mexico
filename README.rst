@@ -1,3 +1,6 @@
+.. image:: https://badge.waffle.io/FlowFX/postalcodes_mexico.png?columns=all 
+ :target: https://waffle.io/FlowFX/postalcodes_mexico?utm_source=badge
+ :alt: 'Waffle.io - Columns and their card count'
 ==================
 Postalcodes Mexico
 ==================
