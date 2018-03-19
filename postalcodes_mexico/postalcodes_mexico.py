@@ -34,8 +34,10 @@ def places(postalcode, db=DB_PATH):
     try:
         assert len(postalcode) >= 4
         assert len(postalcode) <= 5
-    except AssertionError:
-        raise ValueError
+        int(postalcode)
+    except Exception:
+        msg = 'Valid postal codes consist of 4 or 5 digits.'
+        raise ValueError(msg)
 
     if len(postalcode) == 4:
         postalcode = '0{}'.format(postalcode)
