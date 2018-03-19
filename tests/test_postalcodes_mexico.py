@@ -75,7 +75,7 @@ class TestPlaces:
         assert len(places) == 2
 
     @pytest.mark.parametrize('postalcode', ['01001', '10001'])
-    def test_non_existing_postal_code(self, postalcode):
+    def test_non_existing_postal_code_returns_empty_list(self, postalcode):
         # GIVEN a 5-digit postal code that does not exist
         CP = postalcode
 
@@ -84,6 +84,21 @@ class TestPlaces:
 
         # THEN it returns an empty list
         assert places == []
+
+    @pytest.mark.parametrize('postalcode', [
+        '000', '100', '100000', '---000', 'abcd',
+    ])
+    def test_invalid_postal_code_raises_value_error(self, postalcode):
+        # GIVEN an invalid postal code
+        CP = postalcode
+
+        # WHEN using the places method
+        with pytest.raises(ValueError) as exc_info:
+            postalcodes_mexico.places(CP)
+
+        # THEN it raises a ValueError with a helpful error message
+        assert exc_info.type == ValueError
+        assert '4 or 5 digits' in str(exc_info.value)
 
 
 class TestPostalcodes:
