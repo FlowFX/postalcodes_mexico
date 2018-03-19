@@ -69,6 +69,8 @@ def postalcodes(postalcode='', db=DB_PATH):
             ('{}%'.format(postalcode),)
         )
 
-        result = [row[0] for row in c]
+        # Return a list of unique postal codes.
+        # The set comprehension does that for us.
+        result = list({row[0] for row in c})
 
     return result

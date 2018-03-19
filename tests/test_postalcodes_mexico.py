@@ -111,7 +111,7 @@ class TestPostalcodes:
 
         # THEN it returns a long list containing all valid Mexican postal codes
         assert isinstance(postalcodes, list)
-        assert len(postalcodes) > 140000
+        assert len(postalcodes) > 30000
 
     def test_postalcode_returns_list_of_possible_postal_codes(self):
         # GIVEN a partial postal code
@@ -123,6 +123,21 @@ class TestPostalcodes:
         # THEN it returns a list of all matching postal codes
         assert isinstance(postalcodes, list)
         assert len(postalcodes) > 1
+
+    def test_postalcode_returns_list_of_unique_postal_codes(self):
+        # GIVEN a known partial postal code
+        # '100' matches '10000', '10010' and '10020'
+        CP = '100'
+
+        # WHEN invoeking the postalcodes function with that partial
+        postalcodes = postalcodes_mexico.postalcodes(CP)
+
+        # THEN it returns a list of unique postal codes
+        assert '10000' in postalcodes
+        assert '10010' in postalcodes
+        assert '10020' in postalcodes
+
+        assert len(postalcodes) == 3
 
 
 def test_command_line_interface():
