@@ -8,6 +8,8 @@ from click.testing import CliRunner
 from postalcodes_mexico import postalcodes_mexico
 from postalcodes_mexico import cli
 
+import pytest
+
 
 class TestPlaces:
     """Test function `places`."""
@@ -71,6 +73,17 @@ class TestPlaces:
         # THEN it returns a list of two places
         assert isinstance(places, list)
         assert len(places) == 2
+
+    @pytest.mark.parametrize('postalcode', ['01001', '10001'])
+    def test_non_existing_postal_code(self, postalcode):
+        # GIVEN a 5-digit postal code that does not exist
+        CP = postalcode
+
+        # WHEN using the places method
+        places = postalcodes_mexico.places(CP)
+
+        # THEN it returns an empty list
+        assert places == []
 
 
 class TestPostalcodes:
