@@ -2,6 +2,15 @@
 History
 =======
 
+0.4.0 (2018-03-20)
+------------------
+
+* Re-add utility functions for updating the database
+* Improve test suite
+* Configure pytest test runner
+* Improve documentation
+
+
 0.3.0 (2018-03-16)
 ------------------
 
