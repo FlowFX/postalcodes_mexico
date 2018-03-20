@@ -26,9 +26,9 @@ Location = namedtuple(
 )
 
 
-def places(postalcode, db=DB_PATH):
+def places(postalcode, db_name=DB_PATH):
     """Return a list of tuples with address information."""
-    con = sqlite3.connect(db)
+    con = sqlite3.connect(db_name)
     con.row_factory = sqlite3.Row
 
     try:

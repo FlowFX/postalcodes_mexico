@@ -5,13 +5,13 @@ import sqlite3
 import xmltodict
 
 
-def update_db(db, xml_file):
+def update_db(db_name, xml_file):
     """Update the places database.
 
     Use the XML files provided by Correos Mexico.
     """
     places = xmltolist(xml_file)
-    con = sqlite3.connect(db)
+    con = sqlite3.connect(db_name)
 
     with con:
         con.execute("DROP TABLE IF EXISTS places")

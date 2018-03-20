@@ -14,14 +14,14 @@ def test_update_db():
     xml_file = 'tests/data/ciudad_de_mexico.xml'
 
     # WHEN calling the database update function
-    utils.update_db(db=test_db, xml_file=xml_file)
+    utils.update_db(db_name=test_db, xml_file=xml_file)
 
     con = sqlite3.connect(test_db)
     con.row_factory = sqlite3.Row
 
     # THEN the test database has entries
     CP = '01000'
-    places = postalcodes_mexico.places(CP, db=test_db)
+    places = postalcodes_mexico.places(CP, db_name=test_db)
 
     assert len(places) == 1
     assert isinstance(places, list)
