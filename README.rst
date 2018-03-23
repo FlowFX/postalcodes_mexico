@@ -3,11 +3,11 @@ Postalcodes Mexico
 ==================
 
 
-.. image:: https://img.shields.io/pypi/v/postalcodes_mexico.svg
-        :target: https://pypi.python.org/pypi/postalcodes_mexico
+.. image:: https://img.shields.io/pypi/v/postalcodes-mexico.svg
+        :target: https://pypi.python.org/pypi/postalcodes-mexico
 
 .. image:: https://img.shields.io/travis/FlowFX/postalcodes_mexico.svg
-        :target: https://travis-ci.org/flowfx/postalcodes_mexico
+        :target: https://travis-ci.org/FlowFX/postalcodes_mexico
 
 .. image:: https://readthedocs.org/projects/postalcodes-mexico/badge/?version=latest
         :target: https://postalcodes-mexico.readthedocs.io/en/latest/?badge=latest
