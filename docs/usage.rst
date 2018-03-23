@@ -20,3 +20,26 @@ To use Postalcodes Mexico in a project::
     Ciudad de México
     >>> my_place.state
     Ciudad de México
+
+
+Updating the database
+---------------------
+
+The PyPI package comes with the database of Mexican postal codes included. In
+order to update the database in the development package, I use the following
+steps:
+
+1. Go to http://www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.aspx
+2. Select 'Todos' and 'XML'
+3. Click 'Descarga'
+4. Unzip the `CPDescargaxml.zip` to the dev folder
+5. Start the Python repl from inside the dev folder
+
+```python
+>>> from postalcodes_mexico import utils
+>>> utils('postalcodes_mexico/data/postalcodes.sqlite3', 'CPDescarga.xml')
+```
+
+Hopefully, no-one besides me ever has to do this. Or someone implements this as `a command-line option`_.
+
+.. _a command-line option: https://github.com/FlowFX/postalcodes_mexico/issues/88
