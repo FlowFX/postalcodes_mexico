@@ -35,10 +35,8 @@ steps:
 4. Unzip the `CPDescargaxml.zip` to the dev folder
 5. Start the Python repl from inside the dev folder
 
-```python
->>> from postalcodes_mexico import utils
->>> utils('postalcodes_mexico/data/postalcodes.sqlite3', 'CPDescarga.xml')
-```
+    >>> from postalcodes_mexico import utils
+    >>> utils('postalcodes_mexico/data/postalcodes.sqlite3', 'CPDescarga.xml')
 
 Hopefully, no-one besides me ever has to do this. Or someone implements this as `a command-line option`_.
 
