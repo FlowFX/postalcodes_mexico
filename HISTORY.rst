@@ -2,6 +2,12 @@
 History
 =======
 
+0.4.1 (2018-03-23)
+------------------
+
+* Update postal code database to latest information from www.correosdemexico.gob.mx/lservicios/servicios/CodigoPostal_Exportar.aspx
+* Improve documentation on how to update the database
+
 0.4.0 (2018-03-20)
 ------------------
 
